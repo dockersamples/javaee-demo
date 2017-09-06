@@ -1,0 +1,24 @@
+version: "3.1"
+
+services: 
+  movieplex7:
+    build: 
+      context: ./movieplex7
+    image: movieples7-tomee
+    ports:
+      - "8080:8080"
+    networks:
+      - www
+  
+  react-client:
+    build:
+      context: ./react-client
+    image: react-client
+    ports:
+      - "80:3000"
+    networks:
+      - www
+  
+networks:
+    www:
+    
