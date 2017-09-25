@@ -4,7 +4,7 @@ services:
   movieplex7:
     build: 
       context: ./movieplex7
-    image: movieples7-tomee
+    image: movieplex7-tomee
     ports:
       - "8080:8080"
     networks:

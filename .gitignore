@@ -1,0 +1,10 @@
+.DS_Store
+.project
+.classpath
+.Dockfile.wildfly
+/movieplex7/target/
+.settings/
+/react-client/npm-debug.log
+/react-client/babel_cache/
+/react-client/node_modules/
+/react-client/yarn.lock
