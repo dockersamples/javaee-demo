@@ -14,6 +14,8 @@ services:
     build:
       context: ./react-client
     image: react-client
+    env_file:
+      - env.env
     ports:
       - "80:3000"
     networks:
