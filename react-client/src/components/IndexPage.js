@@ -3,7 +3,18 @@ import React from 'react';
 import MoviePreview from './MoviePreview';
 import MoviePage from './MoviePage';
 
-var REQUEST_URL = 'http://localhost:8080/movieplex7-1.0-SNAPSHOT/webresources/movie/';
+var REQUEST_URL
+const fileExists = require('file-exists');
+fileExists('env.env')
+.then(exists => {
+  host_url = process.env.HOST;
+  host_url += 'movieplex7-1.0-SNAPSHOT/webresources/movie/';
+  REQUEST_URL = host_url;
+})
+.catch(err => {
+ REQUEST_URL = 'http://localhost:8080/movieplex7-1.0-SNAPSHOT/webresources/movie/';
+});
+
 var parseXml = require('xmljson').to_json;
 
 function status(response) {  
