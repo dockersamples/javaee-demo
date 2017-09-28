@@ -22,9 +22,7 @@
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-router": "^2.6.1",
-    "xml2js": "^0.4.19",
     "xmljson": "^0.2.0",
-    "xmltojson": "^1.1.0",
     "webpack": "^2.1.0"
   },
   "devDependencies": {
