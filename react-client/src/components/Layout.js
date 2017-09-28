@@ -6,10 +6,10 @@ export default class Layout extends React.Component {
     return (
       <div className="app-container">
         <header>
-        <div className="transbox">
-          <p>MOVIEPLEX 7</p>
+        <div className="container group">
+          <h1>MOVIEPLEX 7</h1>
             <Link to="/">
-              {<img className="logo" src="/img/banner.jpg"/>}
+              {<img className="logo" src="./img/banner.jpg"/>}
             </Link>
           </div>
         </header>
