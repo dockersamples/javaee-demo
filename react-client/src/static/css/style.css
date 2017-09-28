@@ -41,18 +41,14 @@ header {
 
 .centered {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 15%;
+  left: 35%;
   transform: translate(-50%, -50%);
+  font-family: 'Ubuntu', sans-serif;
   font-size: 10em;
-  color: #ffffff;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto;
-  max-height: 200px;
-  width: 100%;
+  font-weight: 700;
+  font-style: italic;
+  color: #9408C4;
 }
 
 header .group {
@@ -61,20 +57,6 @@ header .group {
   bottom: 0;
   margin: 0 auto;
   text-align: center;
-}
-
-header .transbox {
-  margin: 30px;
-  background-color: #ffffff;
-  border: 0px solid black;
-  opacity: 0.0;
-  filter: alpha(opacity=60); /* For IE8 and earlier */
-}
-
-header .transbox p {
-  margin: 5%;
-  font-weight: bold;
-  color: #ffffff;
 }
 
 footer {
@@ -204,11 +186,12 @@ nav.movies-menu a.active {
 
 .movie .picture-container img {
   border-radius: 4px;
-  border: 8px solid #fff;
+  /* border: 8px solid #fff; */
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
   display: inline;
   margin: 0 0 0 1em;
   width: 200px;
+  max-height: 350px;
 }
 
 .movie .picture-container h2 {
@@ -224,47 +207,9 @@ nav.movies-menu a.active {
   width: auto;
 }
 
-.movie .description,
-.movie .medals {
+.movie .description {
   font-size: 1.6em;
   padding: 1em;
-}
-
-.movie .medals p {
-  font-size: 1em;
-}
-
-.movie .medals li {
-  list-style: none;
-}
-
-.movie .medals .symbol {
-  border-radius: 50%;
-  display: inline-block;
-  font-size: .8em;
-  height: 1.6em;
-  justify-content: center;
-  margin: 5px;
-  text-align: center;
-  width: 1.6em;
-}
-
-.movie .medals .symbol.symbol-G {
-  color: #daa520;
-  background-color: #fff6de;
-  border: 2px solid #daa520;
-}
-
-.movie .medals .symbol.symbol-S {
-  color: #383738;
-  background-color: #b9b5b5;
-  border: 2px solid #383738;
-}
-
-.movie .medals .symbol.symbol-B {
-  color: #6b1919;
-  background-color: #ea96a1;
-  border: 2px solid #6E1924;
 }
 
 .navigateBack {
@@ -296,5 +241,3 @@ nav.movies-menu a.active {
 #abar a:hover {
   text-decoration: underline;
 }
-
-.rowC{display:flex; flex-direction:row;}

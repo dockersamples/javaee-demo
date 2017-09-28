@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-
 export default class Layout extends React.Component {
   render() {
     return (
@@ -10,7 +9,7 @@ export default class Layout extends React.Component {
             <Link to="/">
               <div className="container">
                 <img src="/img/banner.jpg"/>
-                <div className="centered">MOVIEPLEX7</div>
+                <div className="centered">MOVIEPLEX 7</div>
               </div>
             </Link>
         </header>
