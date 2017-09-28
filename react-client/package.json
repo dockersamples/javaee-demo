@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node_modules/.bin/http-server -p 3000 src/static",
-    "build": "NODE_ENV=production; HOST=localhost:8080; ./node_modules/.bin/webpack -p"
+    "start": "NODE_ENV=production node_modules/.bin/http-server -p 3000 src/static",
+    "build": "NODE_ENV=production ./node_modules/.bin/webpack --color -p --progress"
   },
   "author": "",
   "license": "MIT",
