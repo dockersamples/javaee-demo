@@ -9,7 +9,7 @@ const fileExists = require('file-exists');
 fileExists('env.env')
   .then(exists => {
     host_url = process.env.HOST;
-    host_url += 'movieplex7-1.0-SNAPSHOT/webresources/movie/';
+    host_url += '/movieplex7-1.0-SNAPSHOT/webresources/movie/';
     REQUEST_URL = host_url;
   })
   // .catch(err => {
