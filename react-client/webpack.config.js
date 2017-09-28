@@ -25,7 +25,7 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env' : {
         'NODE_ENV': JSON.stringify(process.env.NODE_ENV),
-        'APP_HOST': JSON.stringify(process.env.HOST || "localhost:8080")
+        'APP_HOST': JSON.stringify(process.env.APP_HOST || "localhost:8080")
       }
     })
   ]
