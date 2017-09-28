@@ -7,12 +7,6 @@ module.exports = {
     path: path.join(__dirname, 'src', 'static', 'js'),
     filename: 'bundle.js'
   },
-  // proxy: {
-  //   'movieplex7-1.0-SNAPSHOT/webresources/movie/': 'http://localhost:3000'
-  // },
-  node: {
-    fs: "empty"
-  },
   module: {
     rules: [{
       // test: path.join(__dirname, 'src'),
@@ -29,16 +23,10 @@ module.exports = {
   },
   plugins: [
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
-    }),
-    // new webpack.optimize.DedupePlugin(),
-    // new webpack.optimize.OccurenceOrderPlugin(),
-    // new webpack.optimize.UglifyJsPlugin({
-    //   compress: { warnings: false },
-    //   mangle: true,
-    //   sourcemap: false,
-    //   beautify: false,
-    //   dead_code: true
-    // })
+      'process.env' : {
+        'NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+        'HOST': JSON.stringify(process.env.HOST || "localhost:8080")
+      }
+    })
   ]
 };
