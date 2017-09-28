@@ -3,8 +3,8 @@ import { Link } from 'react-router';
 import NotFoundPage from './NotFoundPage';
 import MoviesMenu from './MoviesMenu';
 
-var APPLICATION_HOST = process.env.HOST; 
-console.log("host: " + process.env.HOST);
+var APPLICATION_HOST = process.env.APP_HOST; 
+console.log("host: " + process.env.APP_HOST);
 var REQUEST_URL = "http://"; 
 REQUEST_URL += APPLICATION_HOST;  
 REQUEST_URL += '/movieplex7-1.0-SNAPSHOT/webresources/movie/';

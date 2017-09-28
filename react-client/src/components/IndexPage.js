@@ -3,7 +3,7 @@ import React from 'react';
 import MoviePreview from './MoviePreview';
 import MoviePage from './MoviePage';
 
-var APPLICATION_HOST = process.env.HOST; 
+var APPLICATION_HOST = process.env.APP_HOST; 
 var REQUEST_URL = "http://"; 
 REQUEST_URL += APPLICATION_HOST;
 REQUEST_URL += '/movieplex7-1.0-SNAPSHOT/webresources/movie/';
