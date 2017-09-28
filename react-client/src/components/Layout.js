@@ -1,17 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router';
 
+
 export default class Layout extends React.Component {
   render() {
     return (
       <div className="app-container">
         <header>
-        <div className="container group">
-          <h1>MOVIEPLEX 7</h1>
             <Link to="/">
-              {<img className="logo" src="./img/banner.jpg"/>}
+              <div className="container">
+                <img src="/img/banner.jpg"/>
+                <div className="centered">MOVIEPLEX7</div>
+              </div>
             </Link>
-          </div>
         </header>
         <div className="app-content">{this.props.children}</div>
         <footer>
