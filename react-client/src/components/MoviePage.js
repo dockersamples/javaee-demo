@@ -12,9 +12,9 @@ fileExists('env.env')
     host_url += 'movieplex7-1.0-SNAPSHOT/webresources/movie/';
     REQUEST_URL = host_url;
   })
-  .catch(err => {
-   REQUEST_URL = 'http://localhost:8080/movieplex7-1.0-SNAPSHOT/webresources/movie/';
-  });
+  // .catch(err => {
+  //  REQUEST_URL = 'http://localhost:8080/movieplex7-1.0-SNAPSHOT/webresources/movie/';
+  // });
 var parseXml = require('xmljson').to_json;
 
 function status(response) {  
