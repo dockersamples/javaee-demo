@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
+  API_HOST: "",
   entry: path.join(__dirname, 'src', 'app-client.js'),
   output: {
     path: path.join(__dirname, 'src', 'static', 'js'),
@@ -24,8 +25,8 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       'process.env' : {
-        NODE_ENV: JSON.stringify(process.env.NODE_ENV || "production"),
-        API_HOST: JSON.stringify(process.env.API_HOST || "127.0.0.1:8080")
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+        API_HOST: JSON.stringify(process.env.API_HOST || "localhost:8080")
       }
     })
   ]
