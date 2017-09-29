@@ -9,6 +9,8 @@ REQUEST_URL += APPLICATION_HOST;
 REQUEST_URL += '/movieplex7-1.0-SNAPSHOT/webresources/movie/';
 var parseXml = require('xmljson').to_json;
 
+console.log(process.env);
+
 function status(response) {  
   if (response.ok) {  
     return Promise.resolve(response)  
