@@ -15,3 +15,11 @@ The Movieplex7 application includes a REST interface which simplifies updating t
 To run the demo:
 
 ``` docker-compose up```
+
+To run the demo in Play-with-Docker:
+
+```
+git clone https://github.com/dockersamples/javaee-demo.git
+echo -n 'API_HOST=pwd' > env.env; echo -n `hostname -i` | sed 's/\./-/g'  >> env.env; echo -n '-8080.' >> env.env; echo $PWD_HOST_FQDN >> env.env
+docker-compose up
+```
