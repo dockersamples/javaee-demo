@@ -16,7 +16,7 @@ To run the demo:
 
 ``` docker-compose up```
 
-To run the demo in Play-with-Docker:
+To run the demo in [Play-with-Docker](http://labs.play-with-docker.com/):
 
 ```
 git clone https://github.com/dockersamples/javaee-demo.git
