@@ -51,7 +51,7 @@ export default class IndexPage extends React.Component {
   }
 
   componentDidMount() {
-    fetch(REQUEST_URL)
+    fetch(REQUEST_URL, {mode: 'cors'})
     .then(status)
     .then(clone)
     .then(text)
