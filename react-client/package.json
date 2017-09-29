@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "set:env": "node setenv.js > .env",
-    "start": "NODE_ENV=production node_modules/.bin/http-server -p 3000 src/static",
-    "build": "npm run set:env && NODE_ENV=production ./node_modules/.bin/webpack --color -p --progress"
+    "start": "npm run set:env && NODE_ENV=production env-cmd .env ./node_modules/.bin/http-server -p 3000 src/static",
+    "build": "npm run set:env && NODE_ENV=production env-cmd .env ./node_modules/.bin/webpack --color -p --progress"
   },
   "author": "",
   "license": "MIT",
@@ -17,6 +17,7 @@
     "babel-preset-react": "^6.11.1",
     "csvtojson": "^1.1.7",
     "ejs": "^2.5.7",
+    "env-cmd": "^7.0.0",
     "express": "^4.14.1",
     "file-exists": "^5.0.0",
     "http-server": "^0.9.0",
