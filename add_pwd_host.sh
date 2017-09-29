@@ -1,6 +1,7 @@
 #!/bin/bash
 
-hostname=$(echo $PWD_IP_ADDRESS | sed 's/\./-/g')
+host_ip=$(hostname -i)
+hostname=$(echo $host_ip | sed 's/\./-/g')
 FQDN=${PWD_HOST_FQDN}
 API_ENDPOINT="pwd$hostname-8080.$FQDN"
   
