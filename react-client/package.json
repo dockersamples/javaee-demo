@@ -4,9 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "set:env": "node setenv.js > .env",
-    "start": "npm run set:env && NODE_ENV=production env-cmd .env ./node_modules/.bin/http-server -p 3000 src/static",
-    "build": "npm run set:env && NODE_ENV=production env-cmd .env ./node_modules/.bin/webpack --color -p --progress"
+    "start": "NODE_ENV=production ./node_modules/.bin/http-server -p 3000 src/static",
+    "build": "NODE_ENV=production ./node_modules/.bin/webpack --color -p --progress"
   },
   "author": "",
   "license": "MIT",
