@@ -58,7 +58,7 @@ export default class MoviePage extends React.Component {
 
   MovieList(){
     return (
-      fetch(REQUEST_URL)
+      fetch(REQUEST_URL, {mode: 'cors'})
       .then(status)
       .then(clone)
       .then(text)

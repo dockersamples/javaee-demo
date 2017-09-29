@@ -1,5 +1,4 @@
 FROM node:latest 
-ENV API_HOST=$API_HOST
 WORKDIR /usr/src/react-client
 COPY . .
 RUN npm install
