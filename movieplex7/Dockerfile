@@ -5,8 +5,6 @@ RUN mvn -B -f pom.xml -s /usr/share/maven/ref/settings-docker.xml dependency:res
 COPY . .
 RUN mvn -B -s /usr/share/maven/ref/settings-docker.xml package -DskipTests
 
-
-
 FROM tomee:8-jre-7.0.2-plume
 
 # tomcat-users.xml sets up user accounts for the Tomcat manager GUI
