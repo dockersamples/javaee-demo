@@ -23,7 +23,7 @@ git clone https://github.com/dockersamples/javaee-demo.git
 
 cd javaee-demo
 
-./add_host.sh
+./add_pwd_host.sh
 
 docker-compose up
 ```
