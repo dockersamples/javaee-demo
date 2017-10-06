@@ -2,11 +2,9 @@
 import React from 'react';
 import MoviePreview from './MoviePreview';
 import MoviePage from './MoviePage';
+import { API_HOST } from '../api-host';
 
-var APPLICATION_HOST = process.env.API_HOST; 
-var REQUEST_URL = "http://"; 
-REQUEST_URL += APPLICATION_HOST;
-REQUEST_URL += '/movieplex7-1.0-SNAPSHOT/webresources/movie/';
+var REQUEST_URL = `http://${API_HOST}/movieplex7-1.0-SNAPSHOT/webresources/movie/`;
 var parseXml = require('xmljson').to_json;
 
 console.log(process.env);
