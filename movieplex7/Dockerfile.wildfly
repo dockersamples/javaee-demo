@@ -8,8 +8,12 @@ RUN mvn -B -s /usr/share/maven/ref/settings-docker.xml package -DskipTests
 FROM jboss/wildfly
 RUN /opt/jboss/wildfly/bin/add-user.sh admin Admin --silent
 <<<<<<< HEAD
+<<<<<<< HEAD
 WORKDIR /opt/jboss/wildfly/standalone/deployments/
 COPY --from=app /usr/src/movieplex7/target/movieplex7-1.0-SNAPSHOT.war .
+=======
+COPY --from=app /usr/src/movieplex7/target/movieplex7-1.0-SNAPSHOT.war /opt/jboss/wildfly/standalone/deployments/ 
+>>>>>>> parent of 45eb856... update movieplex7 dockerfile
 =======
 COPY --from=app /usr/src/movieplex7/target/movieplex7-1.0-SNAPSHOT.war /opt/jboss/wildfly/standalone/deployments/ 
 >>>>>>> parent of 45eb856... update movieplex7 dockerfile
