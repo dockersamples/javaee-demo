@@ -14,7 +14,7 @@ services:
         failure_action: rollback
       placement:
         constraints:
-          - 'node.role == manager'
+          - 'node.role == worker'
       restart_policy:
         condition: on-failure
         delay: 5s
