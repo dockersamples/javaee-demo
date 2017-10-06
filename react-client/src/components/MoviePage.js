@@ -3,11 +3,8 @@ import { Link } from 'react-router';
 import NotFoundPage from './NotFoundPage';
 import MoviesMenu from './MoviesMenu';
 
-var APPLICATION_HOST = process.env.API_HOST; 
-console.log("host: " + process.env.API_HOST);
-var REQUEST_URL = "http://"; 
-REQUEST_URL += APPLICATION_HOST;  
-REQUEST_URL += '/movieplex7-1.0-SNAPSHOT/webresources/movie/';
+var API_HOST = process.env.API_HOST; 	
+var REQUEST_URL = `http://${API_HOST}/movieplex7-1.0-SNAPSHOT/webresources/movie/`;
 var parseXml = require('xmljson').to_json;
 
 function status(response) {  
