@@ -54,6 +54,8 @@ export default class MoviePage extends React.Component {
   }
 
   MovieList(){
+    console.log(window.location.host);
+    
     return (
       fetch(REQUEST_URL, {mode: 'cors'})
       .then(status)

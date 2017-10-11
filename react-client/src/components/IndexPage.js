@@ -49,6 +49,8 @@ export default class IndexPage extends React.Component {
   }
 
   componentDidMount() {
+    console.log(window.location.host);
+    
     fetch(REQUEST_URL, {mode: 'cors'})
     .then(status)
     .then(clone)
