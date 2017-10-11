@@ -54,7 +54,9 @@ export default class MoviePage extends React.Component {
   }
 
   MovieList(){
-    console.log(window.location.host);
+    if (window.location.host.indexOf('play') {
+      REQUEST_URL = window.location.host.replace("-80.host", "-8080.host")+"/movieplex7-1.0-SNAPSHOT/webresources/movie/`";
+    };
     
     return (
       fetch(REQUEST_URL, {mode: 'cors'})
