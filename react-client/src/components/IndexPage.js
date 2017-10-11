@@ -50,7 +50,7 @@ export default class IndexPage extends React.Component {
 
   componentDidMount() {
     if (window.location.host.indexOf('play')) {
-      REQUEST_URL = "https://" + window.location.host.replace("-80.host", "-8080.host")+"/movieplex7-1.0-SNAPSHOT/webresources/movie/";
+      REQUEST_URL = "http://" + window.location.host.replace("-80", "-8080")+"/movieplex7-1.0-SNAPSHOT/webresources/movie/";
     };
     fetch(REQUEST_URL, {mode: 'cors'})
     .then(status)
