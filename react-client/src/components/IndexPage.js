@@ -8,6 +8,7 @@ var REQUEST_URL = `http://${API_HOST}/movieplex7-1.0-SNAPSHOT/webresources/movie
 var parseXml = require('xmljson').to_json;
 
 console.log(process.env);
+console.log(REQUEST_URL);
 
 function status(response) {  
   if (response.ok) {  
@@ -49,9 +50,10 @@ export default class IndexPage extends React.Component {
   }
 
   componentDidMount() {
-    if (window.location.host.indexOf('play')) {
+    if (window.location.host.indexOf('play') > 0) {
       REQUEST_URL = "http://" + window.location.host.replace("-80", "-8080")+"/movieplex7-1.0-SNAPSHOT/webresources/movie/";
     };
+    console.log(REQUEST_URL);
     fetch(REQUEST_URL, {mode: 'cors'})
     .then(status)
     .then(clone)
