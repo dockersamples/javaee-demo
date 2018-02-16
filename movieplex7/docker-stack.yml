@@ -1,0 +1,22 @@
+version: "3.2"
+
+services: 
+  movieplex7:
+    image: dockersamples/movieplex7-tomee
+    ports:
+      - "8080:8080"
+    networks:
+      - www
+    deploy:
+      replicas: 2
+      update_config:
+        parallelism: 2
+        failure_action: rollback
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 3
+        window: 120s
+  
+networks:
+    www:  
