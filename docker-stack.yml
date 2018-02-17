@@ -12,9 +12,6 @@ services:
       update_config:
         parallelism: 2
         failure_action: rollback
-      placement:
-        constraints:
-          - 'node.role == manager'
       restart_policy:
         condition: on-failure
         delay: 5s
@@ -24,7 +21,7 @@ services:
   react-client:
     image: dockersamples/react-client
     ports:
-      - "80:3000"
+      - "80:80"
     networks:
       - www
     deploy:
@@ -32,29 +29,11 @@ services:
       update_config:
         parallelism: 2
         failure_action: rollback
-      placement:
-        constraints:
-          - 'node.role == worker'
       restart_policy:
         condition: on-failure
         delay: 5s
         max_attempts: 3
         window: 120s    
 
-  visualizer:
-    image: dockersamples/visualizer:stable
-    ports:
-      - "8001:8080"
-    stop_grace_period: 1m30s
-    volumes:
-      - "/var/run/docker.sock:/var/run/docker.sock"
-    deploy:
-      update_config:
-        failure_action: rollback
-      placement:
-        constraints:
-          - 'node.role == manager'  
-
-  
 networks:
     www:  
