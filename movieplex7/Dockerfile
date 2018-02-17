@@ -14,7 +14,7 @@ ADD tomcat/tomcat-users.xml conf/
 ADD tomcat/web.xml conf/
 # copy and deploy application
 WORKDIR /usr/local/tomee/webapps/
-COPY --from=app /usr/src/movieplex7/target/movieplex7-1.0-SNAPSHOT.war .
+COPY --from=app /usr/src/movieplex7/target/movieplex7-1.0-SNAPSHOT.war movieplex7.war
 # start tomcat7 
 EXPOSE 8080
 CMD ["catalina.sh", "run"]

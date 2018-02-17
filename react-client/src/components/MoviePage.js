@@ -4,7 +4,7 @@ import NotFoundPage from './NotFoundPage';
 import MoviesMenu from './MoviesMenu';
 
 var API_HOST = process.env.API_HOST; 	
-var REQUEST_URL = `http://${API_HOST}/movieplex7-1.0-SNAPSHOT/webresources/movie/`;
+var REQUEST_URL = `http://${API_HOST}/movieplex7/webresources/movie/`;
 var parseXml = require('xmljson').to_json;
 
 function status(response) {  
@@ -55,7 +55,7 @@ export default class MoviePage extends React.Component {
 
   MovieList(){
     // if (window.location.host.indexOf('play') > 0) {
-    //   REQUEST_URL = "http://" + window.location.host.replace("-80", "-8080")+"/movieplex7-1.0-SNAPSHOT/webresources/movie/";
+    //   REQUEST_URL = "http://" + window.location.host.replace("-80", "-8080")+"/movieplex7/webresources/movie/";
     // };
     
     return (
