@@ -4,7 +4,7 @@ import MoviePreview from './MoviePreview';
 import MoviePage from './MoviePage';
 
 var API_HOST = process.env.API_HOST; 		 
-var REQUEST_URL = `http://${API_HOST}/movieplex7-1.0-SNAPSHOT/webresources/movie/`;
+var REQUEST_URL = `http://${API_HOST}/movieplex7/webresources/movie/`;
 var parseXml = require('xmljson').to_json;
 
 console.log(process.env);
@@ -50,11 +50,11 @@ export default class IndexPage extends React.Component {
   }
 
   componentDidMount() {
-    if (window.location.host.indexOf('play') > 0) {
-      REQUEST_URL = "http://" + window.location.host.replace("-80", "-8080")+"/movieplex7-1.0-SNAPSHOT/webresources/movie/";
-    };
-    console.log(REQUEST_URL);
-    fetch(REQUEST_URL, {mode: 'cors'})
+      if (API_HOST === null && window.location.host.indexOf('play') > 0) {
+        REQUEST_URL = "http://" + window.location.host.replace("-80", "-8080")+"/movieplex7/webresources/movie/";
+      };
+      console.log(REQUEST_URL);
+      fetch(REQUEST_URL, {mode: 'cors'})
     .then(status)
     .then(clone)
     .then(text)

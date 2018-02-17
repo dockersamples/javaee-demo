@@ -17,23 +17,6 @@ services:
         delay: 5s
         max_attempts: 3
         window: 120s
-
-  react-client:
-    image: dockersamples/react-client
-    ports:
-      - "80:80"
-    networks:
-      - www
-    deploy:
-      replicas: 2
-      update_config:
-        parallelism: 2
-        failure_action: rollback
-      restart_policy:
-        condition: on-failure
-        delay: 5s
-        max_attempts: 3
-        window: 120s    
-
+  
 networks:
     www:  
