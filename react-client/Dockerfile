@@ -1,4 +1,5 @@
 FROM node:latest AS build
+ENV API_HOST=ip172-18-0-24-bapf90ugera000cfavdg.direct.beta-hybrid.play-with-docker.com:8080
 WORKDIR /usr/src/react-client
 COPY package.json .
 RUN npm install
