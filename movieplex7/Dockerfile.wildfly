@@ -5,7 +5,7 @@ RUN mvn -B -f pom.xml -s /usr/share/maven/ref/settings-docker.xml dependency:res
 COPY . .
 RUN mvn -B -s /usr/share/maven/ref/settings-docker.xml package -DskipTests
 
-FROM arungupta/wildfly-mysql-javaee7
+FROM jboss/wildfly:9.0.2.Final
 RUN /opt/jboss/wildfly/bin/add-user.sh admin Admin --silent
 WORKDIR /opt/jboss/wildfly/standalone/deployments/
 COPY --from=app /usr/src/movieplex7/target/movieplex7-1.0-SNAPSHOT.war .
